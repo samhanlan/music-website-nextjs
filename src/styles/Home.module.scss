@@ -1,0 +1,183 @@
+@import 'viewports.scss';
+
+.main {
+  background-color: var(--bg);
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo {
+  width: 33.3%;
+  max-width: 33.3vh;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::after {
+    content: " ";
+    display: block;
+    padding-top: 71%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../assets/SH_logo@1x.jpg);
+
+    @media screen and (min-width: $tablet) {
+      background-image: url(../assets/SH_logo@2x.jpg);
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    top: 12.5vh;
+    transform: translate(-50%, 0);
+  }
+
+  @media screen and (min-width: $mobile-md) {
+    width: 50%;
+  }
+}
+
+.collage-img {
+  position: fixed;
+  display: block;
+
+  &::after {
+    content: " ";
+    display: block;
+    background: url(../assets/SH_collage_sprite@1x.png) no-repeat;
+
+    @media screen and (min-width: $tablet) {
+      background-image: url(../assets/SH_collage_sprite@2x.png);
+    }
+  }
+}
+
+.link-ring-graphic {
+  height: auto;
+  position: fixed;
+  z-index: 0;
+  width: calc(var(--homeRem) * 10.5);
+
+  text {
+    font-size: calc(0.6 * var(--homeRem));
+    font-family: sans-serif;
+    color: var(--dark);
+
+    @media screen and (min-width: $mobile-md-min) and (orientation: portrait) {
+      font-size: calc(0.7 * var(--homeRem));
+    }
+    @media screen and (min-width: $mobile-md-min) and (orientation: landscape) {
+      font-size: calc(0.7 * var(--homeRem));
+    }
+    @media screen and (min-width: $tablet-min) and (orientation: portrait) {
+      font-size: calc(0.33 * var(--homeRem));
+    }
+    @media screen and (min-width: $tablet-min) and (orientation: landscape) {
+      font-size: calc(0.5 * var(--homeRem));
+    }
+    @media screen and (min-width: $screen-md-min) and (orientation: portrait) {
+      font-size: calc(0.4 * var(--homeRem));
+    }
+    @media screen and (min-width: $screen-md-min) and (orientation: landscape) {
+      font-size: calc(0.33 * var(--homeRem));
+    }
+  }
+
+  circle {
+    fill: none;
+    stroke: var(--dark);
+    stroke-width: 1px;
+  }
+}
+
+// singer songwriter
+.singer-songwriter-link-ring {
+  bottom: calc(var(--homeRem) * -1);
+  left: calc(-4 * var(--homeRem));
+  transform: rotate(25deg);
+}
+
+.singer-songwriter-collage {
+  bottom: -1px;
+  left: -1px;
+  width: calc(var(--homeRem) * 5);
+
+  &::after {
+    padding-top: 180%;
+    background-size: auto 100%;
+    background-position: 0 0;
+  }
+}
+
+// electronic musician
+.electronic-musician-link-ring {
+  transform: rotate(-26deg);
+  bottom: calc(-2 * var(--homeRem));
+  right: calc(var(--homeRem) * -3.5);
+}
+
+.electronic-music-collage {
+  width: calc(var(--homeRem) * 5.5);
+  bottom: -1px;
+  right: -1px;
+  transform: scaleX(-1);
+
+  &::after {
+    padding-top: 177%;
+    background-size: auto 100%;
+    background-position: 100% 0;
+  }
+}
+
+// audio engineer
+.audio-eng-link-ring {
+  display: block;
+  top: calc(-4 * var(--homeRem));
+  right: calc(50% - var(--homeRem) * 5.5);
+
+  &.landscape {
+    display: none;
+    top: unset;
+    bottom: calc(-3 * var(--homeRem));
+  }
+
+  @media screen and (orientation: landscape) {
+    display: none;
+    &.landscape {
+      display: block;
+    }
+  }
+}
+
+.audio-eng-collage {
+  width: calc(var(--homeRem) * 5.5);
+  top: -1px;
+  right: calc(50% - 9 * var(--homeRem));
+  transform: rotate(90deg);
+  transform-origin: left top;
+
+  &::after {
+    padding-top: 175%;
+    background-size: auto 128%;
+    background-position: 50% bottom;
+  }
+
+  &.landscape {
+    display: none;
+    top: unset;
+    bottom: -1px;
+    right: calc(50% - 11 * var(--homeRem));
+    transform: rotate(270deg);
+    transform-origin: left bottom;
+  }
+
+  @media screen and (orientation: landscape) {
+    display: none;
+    &.landscape {
+      display: block;
+    }
+  }
+}
