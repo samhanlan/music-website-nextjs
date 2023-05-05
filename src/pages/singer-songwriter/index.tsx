@@ -15,15 +15,27 @@ export default function SingerSongwriter() {
 }
 
 const ReleasesList = () => {
-    return <>
-        <iframe className={styles.bandcampEmbed} src="https://bandcamp.com/EmbeddedPlayer/album=1721633599/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
-        <iframe className={styles.bandcampEmbed} src="https://bandcamp.com/EmbeddedPlayer/album=585253199/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
-    </>
+    return <div className={styles.releasesList}>
+        <div className={styles.bandcampEmbed}>
+        <iframe width={350} height={350} src="https://bandcamp.com/EmbeddedPlayer/album=1721633599/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
+        {/* <iframe src="https://bandcamp.com/EmbeddedPlayer/album=1721633599/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe> */}
+        </div>
+        <div className={styles.bandcampEmbed}>
+        <iframe width={350} height={350} src="https://bandcamp.com/EmbeddedPlayer/album=585253199/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
+        {/* <iframe src="https://bandcamp.com/EmbeddedPlayer/album=585253199/size=large/bgcol=ffffff/linkcol=333333/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe> */}
+        </div>
+    </div>
+}
+
+const HeroVideo = () => {
+    return <div className={styles.videoWrap}>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dBAUMlKddLE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
+    </div>
 }
 
 const SocialIcons = () => {
     return <>
-        <ul>
+        <ul className={styles.socialIconsList}>
             <li>
                 <a
                     href="https://open.spotify.com/artist/3XEowfTI8l2Wc7SHmrf5KN?si=d5OQLAI3SsGS0zwY8DP6Jw&dl_branch=1"
@@ -104,8 +116,4 @@ const SocialIcons = () => {
             </defs>
         </svg>
     </>
-}
-
-const HeroVideo = () => {
-    return <iframe width="560" height="315" src="https://www.youtube.com/embed/dBAUMlKddLE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen/>
 }
