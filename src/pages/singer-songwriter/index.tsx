@@ -3,6 +3,19 @@ import Image from "next/image";
 import logoImage from "@/assets/SH_logo_horizontal.jpg";
 import bandcampLogo from "@/assets/bandcampLogo.svg";
 
+const links = {
+    tidal: "GET FROM CALUM?",
+    deezer: "https://www.deezer.com/album/262854002",
+    appleMusic: "https://music.apple.com/us/album/lifetime-access-ep/1588508937?uo=4",
+    youtube: "https://youtube.com/channel/UCVSn-yQId3JNtShdzNrJ_Ig",
+    instagram: "https://www.instagram.com/samhanlan/",
+    spotify: "https://open.spotify.com/artist/3XEowfTI8l2Wc7SHmrf5KN?si=d5OQLAI3SsGS0zwY8DP6Jw&dl_branch=1",
+    inTheNook: "https://www.youtube.com/embed/dBAUMlKddLE",
+    bandcamp: "https://samhanlan.bandcamp.com",
+    bandcampLifetimeAccess: "https://bandcamp.com/EmbeddedPlayer/album=1721633599/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/",
+    bandcampSharpRelief: "https://bandcamp.com/EmbeddedPlayer/album=585253199/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/",
+};
+
 export default function SingerSongwriter() {
     return <main className={styles.main}>
         <div className={styles.innerContainer}>
@@ -17,17 +30,17 @@ export default function SingerSongwriter() {
 const ReleasesList = () => {
     return <div className={styles.releasesList}>
         <div className={styles.bandcampEmbed}>
-            <iframe width={350} height={350} src="https://bandcamp.com/EmbeddedPlayer/album=1721633599/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
+            <iframe width={350} height={350} src={links.bandcampLifetimeAccess} seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
         </div>
         <div className={styles.bandcampEmbed}>
-            <iframe width={350} height={350} src="https://bandcamp.com/EmbeddedPlayer/album=585253199/size=large/bgcol=ffffff/linkcol=333333/minimal=true/transparent=true/" seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
+            <iframe width={350} height={350} src={links.bandcampSharpRelief} seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
         </div>
     </div>
 }
 
 const HeroVideo = () => {
     return <div className={styles.videoWrap}>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dBAUMlKddLE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        <iframe width="560" height="315" src={links.inTheNook} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
     </div>
 }
 
@@ -35,50 +48,47 @@ const SocialIcons = () => {
     return <>
         <ul className={styles.socialIconsList}>
             <li>
-                <a
-                    href="https://open.spotify.com/artist/3XEowfTI8l2Wc7SHmrf5KN?si=d5OQLAI3SsGS0zwY8DP6Jw&dl_branch=1"
-                    target="_blank"
-                >
+                <a href={links.spotify} target="_blank">
                     <svg className={styles.socialIcon} role="img" viewBox="0 0 24 24">
                         <use xlinkHref="#spotify-icon" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.instagram}  target="_blank">
                     <svg className={styles.socialIcon} role="img" viewBox="0 0 600 600">
                         <use xlinkHref="#instagram-icon" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.youtube} target="_blank">
                     <svg className={styles.socialIcon} role="img" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
                         <use xlinkHref="#youtube-icon" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.bandcamp} target="_blank">
                     <Image className={styles.socialIcon} src={bandcampLogo} alt="bandcamp logo" />
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.deezer} target="_blank">
                     <svg className={styles.socialIcon} viewBox="0 0 97.75 97.75">
                         <use xlinkHref="#deezer-icon" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.appleMusic} target="_blank">
                     <svg className={styles.socialIcon} viewBox="0 0 512 512">
                         <use xlinkHref="#apple-music-icon" />
                     </svg>
                 </a>
             </li>
             <li>
-                <a>
+                <a href={links.tidal} target="_blank">
                     <svg className={styles.socialIcon} fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
                         <use xlinkHref="#tidal-icon" />
                     </svg>
