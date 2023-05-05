@@ -4,26 +4,24 @@ import Link from 'next/link'
 import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Sam Hanlan</title>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
-        <meta name="description" content="Sam Hanlan - music producer | audio engineer | songwriter" />
-        <link rel="shortcut icon" href="../assets/favicon.ico" />
-      </Head>
-      <main className={styles.main}>
-        <span id="logo" className={styles.logo} />
-        <SingerSongwriter />
-        <AudioEngineer orientation='landscape' />
-        <AudioEngineer orientation='portrait' />
-        <ElectronicMusician />
-      </main>
-    </>
-  )
+  return <>
+    <Head>
+      <title>Sam Hanlan</title>
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+      />
+      <meta name="description" content="Sam Hanlan - music producer | audio engineer | songwriter" />
+      <link rel="shortcut icon" href="../assets/favicon.ico" />
+    </Head>
+    <main className={styles.main}>
+      <span id="logo" className={styles.logo} />
+      <SingerSongwriter />
+      <AudioEngineer orientation='landscape' />
+      <AudioEngineer orientation='portrait' />
+      <ElectronicMusician />
+    </main>
+  </>
 }
 
 const SingerSongwriter = () => {
@@ -127,10 +125,10 @@ const ElectronicMusician = () => {
 const AudioEngineer = ({ orientation }: { orientation: "landscape" | "portrait" }) => {
   switch (orientation) {
     case "landscape": {
-      return <Landscape/>;
+      return <Landscape />;
     }
     case "portrait": {
-      return <Portrait/>;
+      return <Portrait />;
     }
     default: {
       throw new Error("Oi you didn't provide an orientation");

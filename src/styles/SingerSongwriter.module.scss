@@ -1,0 +1,26 @@
+@import "../styles/viewports.scss";
+
+.main {
+    border: 8.5vh solid white;
+    border-left: none;
+    border-right: none;
+    border-image: url("../assets/favicon.png") 83 0 round;
+    height: 100vh;
+    display: block;
+    width: 100%;
+}
+
+.innerContainer {
+    width: 100%;
+    max-width: $mobile-md;
+}
+
+.logoImage {
+    width: 100%;
+    height: auto;
+}
+
+.socialIcon {
+    width: 24px;
+    height: 24px;
+}
