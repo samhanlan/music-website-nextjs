@@ -25,7 +25,7 @@ export default function Home() {
 }
 
 const SingerSongwriter = () => {
-  return <Link href="/lifetime-access">
+  return <Link  href="/singer-songwriter">
     <svg
       id="singer-songwriter-link-ring"
       className={`${styles['link-ring-graphic']} ${styles['singer-songwriter-link-ring']}`}
