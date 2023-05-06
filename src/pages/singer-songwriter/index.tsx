@@ -19,7 +19,9 @@ const links = {
 export default function SingerSongwriter() {
     return <main className={styles.main}>
         <div className={styles.innerContainer}>
-            <Image className={styles.logoImage} alt="sam hanlan logo" src={logoImage} width={840} height={178} />
+            <div className={styles.logoImageWrap}>
+                <Image className={styles.logoImage} alt="sam hanlan logo" src={logoImage} width={840} height={178} />
+            </div>
             <SocialIcons />
             <HeroVideo />
             <ReleasesList />
@@ -29,18 +31,24 @@ export default function SingerSongwriter() {
 
 const ReleasesList = () => {
     return <div className={styles.releasesList}>
-        <div className={styles.bandcampEmbed}>
-            <iframe width={350} height={350} src={links.bandcampLifetimeAccess} seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
+        <div className={styles.bandcampEmbedBorder}>
+            <div className={styles.bandcampEmbed}>
+                <iframe width={350} height={350} src={links.bandcampLifetimeAccess} seamless><a href="https://samhanlan.bandcamp.com/album/lifetime-access">Lifetime Access by Sam Hanlan</a></iframe>
+            </div>
         </div>
-        <div className={styles.bandcampEmbed}>
-            <iframe width={350} height={350} src={links.bandcampSharpRelief} seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
+        <div className={styles.bandcampEmbedBorder}>
+            <div className={styles.bandcampEmbed}>
+                <iframe width={350} height={350} src={links.bandcampSharpRelief} seamless><a href="https://samhanlan.bandcamp.com/album/sharp-relief">Sharp Relief by Sam Hanlan</a></iframe>
+            </div>
         </div>
     </div>
 }
 
 const HeroVideo = () => {
-    return <div className={styles.videoWrap}>
-        <iframe width="560" height="315" src={links.inTheNook} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+    return <div className={styles.videoBorder}>
+        <div className={styles.videoWrap}>
+            <iframe width="560" height="315" src={links.inTheNook} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
+        </div>
     </div>
 }
 
@@ -55,7 +63,7 @@ const SocialIcons = () => {
                 </a>
             </li>
             <li>
-                <a href={links.instagram}  target="_blank">
+                <a href={links.instagram} target="_blank">
                     <svg className={styles.socialIcon} role="img" viewBox="0 0 600 600">
                         <use xlinkHref="#instagram-icon" />
                     </svg>
