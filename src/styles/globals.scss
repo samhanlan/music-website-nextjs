@@ -1,4 +1,5 @@
 @import 'viewports.scss';
+@import "./AudioEngineer.scss";
 
 :root {
   --homeRem: 24px;
@@ -13,11 +14,12 @@
 }
 
 html {
+  font-size: 62.5%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 24px;
+
   @media screen and (min-width: $mobile-md) and (orientation: landscape) {
     --homeRem: 24px!important;
   }
