@@ -71,7 +71,7 @@ const SocialIcons = () => {
             </li>
             <li>
                 <a href={links.youtube} target="_blank">
-                    <svg className={styles.socialIcon} role="img" viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd">
+                    <svg className={styles.socialIcon} role="img" viewBox="0 0 3333 3333" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd">
                         <use xlinkHref="#youtube-icon" />
                     </svg>
                 </a>
