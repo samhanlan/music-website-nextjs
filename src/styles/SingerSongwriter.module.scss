@@ -28,6 +28,18 @@ $icon-size: 32px;
     border: 4px solid var(--bg);
 }
 
+@mixin shape-bg-color-animation {
+    &:hover {
+        &::after, &::before {
+            background-color: var(--dark);
+        }
+    }
+
+    &:after, &::before {
+        transition: background-color 0.25s;
+    }
+}
+
 .main {
     background-color: black;
     background: url("../assets/singer-songwriter-photo1_lo.jpg") no-repeat center center fixed;
@@ -41,13 +53,12 @@ $icon-size: 32px;
 
 .innerContainer {
     width: 100%;
-    max-width: $mobile-md;
+    max-width: 520px;
     padding: 16px;
     text-align: center;
 }
 
 .logoImageWrap {
-    padding: 16px;
     margin: 48px auto;
     @include shapeParent();
     display: inline-block;
@@ -68,6 +79,8 @@ $icon-size: 32px;
         height: 100%;
         width: 80%;
     }
+
+    @include shape-bg-color-animation();
 }
 
 .logoImage {
@@ -76,6 +89,9 @@ $icon-size: 32px;
     max-width: 240px;
     display: block;
     margin: auto;
+    padding: 16px;
+    box-sizing: content-box;
+    background-color: var(--bg);
 }
 
 .socialIconsList {
