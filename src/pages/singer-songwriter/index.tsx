@@ -56,13 +56,6 @@ const SocialIcons = () => {
     return <>
         <ul className={styles.socialIconsList}>
             <li>
-                <a href={links.spotify} target="_blank">
-                    <svg className={styles.socialIcon} role="img" viewBox="0 0 24 24">
-                        <use xlinkHref="#spotify-icon" />
-                    </svg>
-                </a>
-            </li>
-            <li>
                 <a href={links.instagram} target="_blank">
                     <svg className={styles.socialIcon} role="img" viewBox="0 0 600 600">
                         <use xlinkHref="#instagram-icon" />
@@ -70,9 +63,9 @@ const SocialIcons = () => {
                 </a>
             </li>
             <li>
-                <a href={links.youtube} target="_blank">
-                    <svg className={styles.socialIcon} role="img" viewBox="0 0 3333 3333" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd">
-                        <use xlinkHref="#youtube-icon" />
+                <a href={links.spotify} target="_blank">
+                    <svg className={styles.socialIcon} role="img" viewBox="0 0 24 24">
+                        <use xlinkHref="#spotify-icon" />
                     </svg>
                 </a>
             </li>
@@ -99,6 +92,13 @@ const SocialIcons = () => {
                 <a href={links.tidal} target="_blank">
                     <svg className={styles.socialIcon} fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 512">
                         <use xlinkHref="#tidal-icon" />
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href={links.youtube} target="_blank">
+                    <svg className={styles.socialIcon} role="img" viewBox="0 0 3333 3333" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd">
+                        <use xlinkHref="#youtube-icon" />
                     </svg>
                 </a>
             </li>
