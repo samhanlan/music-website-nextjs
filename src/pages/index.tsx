@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import styles from "@/styles/SingerSongwriter.module.scss";
 import logoImage from "@/assets/SH_logo_horizontal.jpg";
 import bandcampLogo from "@/assets/bandcampLogo.svg";
+import Head from "next/head";
 
 const links = {
     tidal: "GET FROM CALUM?",
@@ -19,7 +19,14 @@ const links = {
 };
 
 export default function SingerSongwriter() {
-    return <main className={styles.main}>
+    return <>
+    <Head>
+      <title>Sam Hanlan</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Sam Hanlan - music producer | audio engineer | songwriter" />
+      <link rel="shortcut icon" href="../assets/favicon.ico" />
+    </Head>
+        <main className={styles.main}>
         <div className={styles.innerContainer}>
             <Logo />
             <SocialIcons />
@@ -27,6 +34,7 @@ export default function SingerSongwriter() {
             <ReleasesList />
         </div>
     </main>
+    </>
 }
 
 const Logo = () => {
