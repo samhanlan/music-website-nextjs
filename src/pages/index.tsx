@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Head from "next/head";
 
 import styles from "@/styles/SingerSongwriter.module.scss";
 import logoImage from "@/assets/SH_logo_horizontal.jpg";
 import bandcampLogo from "@/assets/bandcampLogo.svg";
-import Head from "next/head";
 
 const links = {
     tidal: "GET FROM CALUM?",
@@ -20,26 +20,26 @@ const links = {
 
 export default function SingerSongwriter() {
     return <>
-    <Head>
-      <title>Sam Hanlan</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Sam Hanlan - music producer | audio engineer | songwriter" />
-      <link rel="shortcut icon" href="../assets/favicon.ico" />
-    </Head>
+        <Head>
+            <title>Sam Hanlan</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="description" content="Sam Hanlan - music producer | audio engineer | songwriter" />
+            <link rel="shortcut icon" href="/favicon.ico" />
+        </Head>
         <main className={styles.main}>
-        <div className={styles.innerContainer}>
-            <Logo />
-            <SocialIcons />
-            <HeroVideo />
-            <ReleasesList />
-        </div>
-    </main>
+            <div className={styles.innerContainer}>
+                <Logo />
+                <SocialIcons />
+                <HeroVideo />
+                <ReleasesList />
+            </div>
+        </main>
     </>
 }
 
 const Logo = () => {
     return <div className={styles.logoImageWrap}>
-        <Image className={styles.logoImage} alt="sam hanlan logo" src={logoImage} width={840} height={178} />
+        <Image priority className={styles.logoImage} alt="sam hanlan logo" src={logoImage} width={840} height={178} />
     </div>
 }
 
